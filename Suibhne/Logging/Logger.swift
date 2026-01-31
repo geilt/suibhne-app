@@ -73,8 +73,12 @@ public final class SuibhneLogger {
         log(.info, message, context: context, file: file, function: function, line: line)
     }
     
-    public func warn(_ message: String, context: [String: Any]? = nil, file: String = #file, function: String = #function, line: Int = #line) {
-        log(.warn, message, context: context, file: file, function: function, line: line)
+    public func warn(_ message: String, error: Error? = nil, context: [String: Any]? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+        var ctx = context ?? [:]
+        if let error = error {
+            ctx["error"] = String(describing: error)
+        }
+        log(.warn, message, context: ctx, file: file, function: function, line: line)
     }
     
     public func error(_ message: String, error: Error? = nil, context: [String: Any]? = nil, file: String = #file, function: String = #function, line: Int = #line) {
