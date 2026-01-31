@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CE22227939D73438F4CDC82 /* CommandRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D425DC0CC3014D54AD9EE2C /* CommandRouter.swift */; };
+		1AE387C67A896FDBAB6BA973 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9BA40563C73E956F02A511 /* Protocol.swift */; };
+		2DB942FF0CCECD8BBA63AB00 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8463A5C9352B9AE81ECF71C /* Logger.swift */; };
+		46872C9CCF09E8DB48141312 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71959A9226508366AAA3785 /* SettingsView.swift */; };
+		5550F3F93132450AC564B756 /* SuibhneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BC5E0092A314C04B065F67 /* SuibhneApp.swift */; };
+		CDCA9C18E5284ECD676E9D03 /* SocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C7E5677BE57A49FEE76148 /* SocketServer.swift */; };
+		E2FF00FD649426E4AB408A5A /* ContactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D949C863B929DC3E981FBEB /* ContactsService.swift */; };
+		ED070DFA388F5D6B06D732FE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD16C3EC1BE12997687E22FB /* Theme.swift */; };
+		FB07C79EE1760CB0E3F7120C /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEAABE60FE51B590EE4269 /* MenuBarView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15C7E5677BE57A49FEE76148 /* SocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketServer.swift; sourceTree = "<group>"; };
+		2D949C863B929DC3E981FBEB /* ContactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsService.swift; sourceTree = "<group>"; };
+		6D9BA40563C73E956F02A511 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		967CFF8457F2EA5C20E6455D /* Suibhne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Suibhne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D425DC0CC3014D54AD9EE2C /* CommandRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandRouter.swift; sourceTree = "<group>"; };
+		AD16C3EC1BE12997687E22FB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BFCEAABE60FE51B590EE4269 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		C8463A5C9352B9AE81ECF71C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D25B65BC13EDB1E29FEEC027 /* Suibhne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Suibhne.entitlements; sourceTree = "<group>"; };
+		E1ECAA8D36391EB5D8A430EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E3BC5E0092A314C04B065F67 /* SuibhneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuibhneApp.swift; sourceTree = "<group>"; };
+		F71959A9226508366AAA3785 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		12D64A18BED080DDF96AEDEB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E3BC5E0092A314C04B065F67 /* SuibhneApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		64B638C6F1520C3BFF98A674 /* Suibhne */ = {
+			isa = PBXGroup;
+			children = (
+				12D64A18BED080DDF96AEDEB /* App */,
+				8C9670FDF0E4D399862E0A7A /* Core */,
+				7789D80BFCF3799A5D1888D1 /* Logging */,
+				DC2E0CC7731F2465CBF6082C /* Resources */,
+				BE5B16B1A0A4436288358A34 /* Services */,
+				FFDA6F2C7640A3793C06C37C /* UI */,
+			);
+			path = Suibhne;
+			sourceTree = "<group>";
+		};
+		7789D80BFCF3799A5D1888D1 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				C8463A5C9352B9AE81ECF71C /* Logger.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		8C9670FDF0E4D399862E0A7A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9D425DC0CC3014D54AD9EE2C /* CommandRouter.swift */,
+				15C7E5677BE57A49FEE76148 /* SocketServer.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		95D8D4409A6A263BDCA2F98B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				967CFF8457F2EA5C20E6455D /* Suibhne.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE5B16B1A0A4436288358A34 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2D949C863B929DC3E981FBEB /* ContactsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC2E0CC7731F2465CBF6082C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECAA8D36391EB5D8A430EA /* Info.plist */,
+				D25B65BC13EDB1E29FEEC027 /* Suibhne.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA458F79AFC9E3786A5CA8E4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6D9BA40563C73E956F02A511 /* Protocol.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EB78D3631EC81070D6F9E120 = {
+			isa = PBXGroup;
+			children = (
+				EA458F79AFC9E3786A5CA8E4 /* Shared */,
+				64B638C6F1520C3BFF98A674 /* Suibhne */,
+				95D8D4409A6A263BDCA2F98B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFDA6F2C7640A3793C06C37C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BFCEAABE60FE51B590EE4269 /* MenuBarView.swift */,
+				F71959A9226508366AAA3785 /* SettingsView.swift */,
+				AD16C3EC1BE12997687E22FB /* Theme.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56CE465211FF3255C9722846 /* Suibhne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 315D4A2AC11C9DE02D59F9EF /* Build configuration list for PBXNativeTarget "Suibhne" */;
+			buildPhases = (
+				A21DD0E9A599D0D939DEE850 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Suibhne;
+			packageProductDependencies = (
+			);
+			productName = Suibhne;
+			productReference = 967CFF8457F2EA5C20E6455D /* Suibhne.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E63B93C8529F696D8E7BB214 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 0B3CF2FED6AA897904602851 /* Build configuration list for PBXProject "Suibhne" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EB78D3631EC81070D6F9E120;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56CE465211FF3255C9722846 /* Suibhne */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A21DD0E9A599D0D939DEE850 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CE22227939D73438F4CDC82 /* CommandRouter.swift in Sources */,
+				E2FF00FD649426E4AB408A5A /* ContactsService.swift in Sources */,
+				2DB942FF0CCECD8BBA63AB00 /* Logger.swift in Sources */,
+				FB07C79EE1760CB0E3F7120C /* MenuBarView.swift in Sources */,
+				1AE387C67A896FDBAB6BA973 /* Protocol.swift in Sources */,
+				46872C9CCF09E8DB48141312 /* SettingsView.swift in Sources */,
+				CDCA9C18E5284ECD676E9D03 /* SocketServer.swift in Sources */,
+				5550F3F93132450AC564B756 /* SuibhneApp.swift in Sources */,
+				ED070DFA388F5D6B06D732FE /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		056C26C60D262E04F3E02549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		69558C0C1BD319BE7EF10EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Suibhne/Resources/Suibhne.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Suibhne/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LSUIElement = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suibhne.app;
+				PRODUCT_NAME = Suibhne;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		90F929332E03D85BA5CDF3F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Suibhne/Resources/Suibhne.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Suibhne/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LSUIElement = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suibhne.app;
+				PRODUCT_NAME = Suibhne;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		98F2867C660982092A3D3380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B3CF2FED6AA897904602851 /* Build configuration list for PBXProject "Suibhne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98F2867C660982092A3D3380 /* Debug */,
+				056C26C60D262E04F3E02549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		315D4A2AC11C9DE02D59F9EF /* Build configuration list for PBXNativeTarget "Suibhne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69558C0C1BD319BE7EF10EF5 /* Debug */,
+				90F929332E03D85BA5CDF3F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E63B93C8529F696D8E7BB214 /* Project object */;
+}
