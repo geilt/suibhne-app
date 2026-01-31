@@ -148,13 +148,21 @@ public struct Contact: Codable, Identifiable {
 // MARK: - Paths
 
 public struct SuibhnePaths {
-    public static let socketPath = "\(NSHomeDirectory())/.suibhne/suibhne.sock"
-    public static let logPath = "\(NSHomeDirectory())/.suibhne/logs"
-    public static let configPath = "\(NSHomeDirectory())/.openclaw/config.yaml"
+    // Use real home directory, not sandbox container
+    private static var realHome: String {
+        if let pw = getpwuid(getuid()), let home = pw.pointee.pw_dir {
+            return String(cString: home)
+        }
+        return NSHomeDirectory() // fallback
+    }
+    
+    public static var socketPath: String { "\(realHome)/.suibhne/suibhne.sock" }
+    public static var logPath: String { "\(realHome)/.suibhne/logs" }
+    public static var configPath: String { "\(realHome)/.openclaw/config.yaml" }
     
     public static func ensureDirectories() {
         let fm = FileManager.default
-        try? fm.createDirectory(atPath: "\(NSHomeDirectory())/.suibhne", withIntermediateDirectories: true)
+        try? fm.createDirectory(atPath: "\(realHome)/.suibhne", withIntermediateDirectories: true)
         try? fm.createDirectory(atPath: logPath, withIntermediateDirectories: true)
     }
 }
