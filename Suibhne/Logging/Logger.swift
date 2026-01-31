@@ -7,9 +7,9 @@ import os.log
 public final class SuibhneLogger {
     public static let shared = SuibhneLogger()
     
-    private let osLog = OSLog(subsystem: "bot.suibhne.app", category: "general")
+    private let osLog = OSLog(subsystem: "app.suibhne.app", category: "general")
     private let fileHandle: FileHandle?
-    private let queue = DispatchQueue(label: "bot.suibhne.logger", qos: .utility)
+    private let queue = DispatchQueue(label: "app.suibhne.logger", qos: .utility)
     private let dateFormatter: ISO8601DateFormatter
     
     public var logLevel: LogLevel = .info

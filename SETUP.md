@@ -12,8 +12,8 @@ The Swift source files are scaffolded. To create the Xcode project:
 4. Configure:
    - Product Name: `Suibhne`
    - Team: (Your Apple Developer Team)
-   - Organization Identifier: `bot.suibhne`
-   - Bundle Identifier: `bot.suibhne.app`
+   - Organization Identifier: `app.suibhne`
+   - Bundle Identifier: `app.suibhne.app`
    - Interface: **SwiftUI**
    - Language: **Swift**
    - ☐ Include Tests (optional)

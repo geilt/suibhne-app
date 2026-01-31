@@ -9,7 +9,7 @@ public final class SocketServer {
     
     private var listener: NWListener?
     private var connections: [NWConnection] = []
-    private let queue = DispatchQueue(label: "bot.suibhne.socket", qos: .userInitiated)
+    private let queue = DispatchQueue(label: "app.suibhne.socket", qos: .userInitiated)
     
     public var commandHandler: ((SuibhneRequest) async -> SuibhneResponse)?
     
