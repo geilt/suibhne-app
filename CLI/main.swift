@@ -9,7 +9,7 @@ import Foundation
 class SuibhneClient {
     private let socketPath: String
     
-    init(socketPath: String = "\(NSHomeDirectory())/.suibhne/suibhne.sock") {
+    init(socketPath: String = "/tmp/suibhne.sock") {
         self.socketPath = socketPath
     }
     
