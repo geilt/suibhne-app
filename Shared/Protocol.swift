@@ -156,16 +156,15 @@ public struct SuibhnePaths {
         return NSHomeDirectory() // fallback
     }
     
-    // Socket in /tmp (accessible by sandboxed apps)
-    public static let socketPath = "/tmp/suibhne.sock"
+    // Socket in user's home directory
+    public static var socketPath: String { "\(realHome)/.suibhne/suibhne.sock" }
     
-    // Logs in home directory (may fail if sandboxed, falls back to container)
-    public static var logPath: String { "\(NSHomeDirectory())/.suibhne/logs" }
+    public static var logPath: String { "\(realHome)/.suibhne/logs" }
     public static var configPath: String { "\(realHome)/.openclaw/config.yaml" }
     
     public static func ensureDirectories() {
         let fm = FileManager.default
-        try? fm.createDirectory(atPath: "\(NSHomeDirectory())/.suibhne", withIntermediateDirectories: true)
+        try? fm.createDirectory(atPath: "\(realHome)/.suibhne", withIntermediateDirectories: true)
         try? fm.createDirectory(atPath: logPath, withIntermediateDirectories: true)
     }
 }
