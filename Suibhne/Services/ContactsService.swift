@@ -241,20 +241,40 @@ public actor ContactsService {
     // MARK: - Mapping
     
     private func mapContact(_ cnContact: CNContact) -> Contact {
-        let name = [cnContact.givenName, cnContact.familyName]
+        // Safely get name
+        let givenName = cnContact.isKeyAvailable(CNContactGivenNameKey) ? cnContact.givenName : ""
+        let familyName = cnContact.isKeyAvailable(CNContactFamilyNameKey) ? cnContact.familyName : ""
+        let name = [givenName, familyName]
             .filter { !$0.isEmpty }
             .joined(separator: " ")
         
-        let phones = cnContact.phoneNumbers.map { $0.value.stringValue }
-        let emails = cnContact.emailAddresses.map { $0.value as String }
+        // Safely get phones
+        let phones: [String] = cnContact.isKeyAvailable(CNContactPhoneNumbersKey) 
+            ? cnContact.phoneNumbers.map { $0.value.stringValue }
+            : []
+        
+        // Safely get emails
+        let emails: [String] = cnContact.isKeyAvailable(CNContactEmailAddressesKey)
+            ? cnContact.emailAddresses.map { $0.value as String }
+            : []
+        
+        // Safely get organization
+        let organization: String? = cnContact.isKeyAvailable(CNContactOrganizationNameKey) && !cnContact.organizationName.isEmpty
+            ? cnContact.organizationName
+            : nil
+        
+        // Safely get notes
+        let notes: String? = cnContact.isKeyAvailable(CNContactNoteKey) && !cnContact.note.isEmpty
+            ? cnContact.note
+            : nil
         
         return Contact(
             id: cnContact.identifier,
             name: name.isEmpty ? "(No Name)" : name,
-            organization: cnContact.organizationName.isEmpty ? nil : cnContact.organizationName,
+            organization: organization,
             phones: phones,
             emails: emails,
-            notes: cnContact.note.isEmpty ? nil : cnContact.note
+            notes: notes
         )
     }
 }
