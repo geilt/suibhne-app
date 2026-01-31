@@ -106,7 +106,8 @@ public actor ContactsService {
             CNContactFamilyNameKey as CNKeyDescriptor,
             CNContactOrganizationNameKey as CNKeyDescriptor,
             CNContactPhoneNumbersKey as CNKeyDescriptor,
-            CNContactEmailAddressesKey as CNKeyDescriptor
+            CNContactEmailAddressesKey as CNKeyDescriptor,
+            CNContactNoteKey as CNKeyDescriptor
         ]
         
         var contacts: [Contact] = []
